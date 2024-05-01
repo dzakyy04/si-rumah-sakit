@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PatientController;
 use App\Http\Controllers\DashboardController;
 
 /*
@@ -15,3 +16,6 @@ use App\Http\Controllers\DashboardController;
 */
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+Route::get('/patient', [PatientController::class, 'index'])->name('patient.index');
+Route::get('/patient/show', [PatientController::class, 'show'])->name('patient.show');
+Route::get('/patient/create', [PatientController::class, 'create'])->name('patient.create');

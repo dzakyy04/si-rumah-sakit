@@ -50,13 +50,10 @@
                         </a>
                         <ul class="nk-menu-sub">
                             <li class="nk-menu-item">
-                                <a href="html/hospital/patient-add.html" class="nk-menu-link"><span class="nk-menu-text">Add Patient</span></a>
+                                <a href="{{ route('patient.create')}}" class="nk-menu-link"><span class="nk-menu-text">Add Patient</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="html/hospital/patient-list.html" class="nk-menu-link"><span class="nk-menu-text">IPD / OPD Patients</span></a>
-                            </li>
-                            <li class="nk-menu-item">
-                                <a href="html/hospital/patient-profile.html" class="nk-menu-link"><span class="nk-menu-text">Patient Profile</span></a>
+                                <a href="{{ route('patient.index')}}" class="nk-menu-link"><span class="nk-menu-text">Patients</span></a>
                             </li>
                         </ul><!-- .nk-menu-sub -->
                     </li><!-- .nk-menu-item -->
