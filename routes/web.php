@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\DashboardController;
 
@@ -19,3 +20,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 Route::get('/patient', [PatientController::class, 'index'])->name('patient.index');
 Route::get('/patient/show', [PatientController::class, 'show'])->name('patient.show');
 Route::get('/patient/create', [PatientController::class, 'create'])->name('patient.create');
+
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login.view');
+});
