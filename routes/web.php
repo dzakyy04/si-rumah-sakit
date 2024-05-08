@@ -23,4 +23,5 @@ Route::get('/patient/create', [PatientController::class, 'create'])->name('patie
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login.view');
+    Route::post('/login', [AuthController::class, 'login'])->name('login');
 });
