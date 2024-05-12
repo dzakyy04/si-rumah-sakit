@@ -1,3 +1,14 @@
+@push('js')
+    <script>
+        $(document).ready(function() {
+            $('#logout-link').click(function(event) {
+                event.preventDefault();
+                $('#logout-form').submit();
+            });
+        });
+    </script>
+@endpush
+
 <div class="nk-header nk-header-fixed nk-header-fluid is-light">
     <div class="container-fluid">
         <div class="nk-header-wrap">
@@ -27,8 +38,8 @@
                                         <span>AB</span>
                                     </div>
                                     <div class="user-info">
-                                        <span class="lead-text">Abu Bin Ishtiyak</span>
-                                        <span class="sub-text">info@softnio.com</span>
+                                        <span class="lead-text">{{ Auth::user()->name }}</span>
+                                        <span class="sub-text">{{ Auth::user()->email }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -39,7 +50,16 @@
                             </div>
                             <div class="dropdown-inner">
                                 <ul class="link-list">
-                                    <li><a href="#"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
+                                    <li>
+                                        <a href="#" id="logout-link">
+                                            <em class="icon ni ni-signout"></em>
+                                            <span>Logout</span>
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
