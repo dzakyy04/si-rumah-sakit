@@ -14,6 +14,7 @@
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="{{ asset('/assets/css/dashlite.css?ver=3.0.3') }}">
     <link id="skin-default" rel="stylesheet" href="{{ asset('/assets/css/theme.css?ver=3.0.3')}}">
+    @stack('css')
 </head>
 
 <body class="nk-body ui-rounder npc-default has-sidebar ">

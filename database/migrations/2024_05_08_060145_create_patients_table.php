@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->integer('age')->nullable();
             $table->string('sex')->nullable();
+            $table->date('ecg_date')->nullable();
             $table->string('diagnose')->nullable();
             $table->string('reason_for_admission')->nullable();
             $table->string('acute_infarction_localization')->nullable();
@@ -60,7 +61,6 @@ return new class extends Migration
             $table->string('additional_medication')->nullable();
             $table->string('in_hospital_medication')->nullable();
             $table->string('medication_after_discharge')->nullable();
-            $table->timestamps();
         });
     }
 

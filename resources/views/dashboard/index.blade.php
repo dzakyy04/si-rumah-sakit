@@ -7,9 +7,9 @@
             <div class="nk-block-head nk-block-head-sm">
                 <div class="nk-block-between">
                     <div class="nk-block-head-content">
-                        <h3 class="nk-block-title page-title">Aqwal</h3>
+                        <h3 class="nk-block-title page-title">Dashboard</h3>
                         <div class="nk-block-des text-soft">
-                            <p>Welcome to DashLite Dashboard Template.</p>
+                            <p>Welcome to Team Diwa Hospital</p>
                         </div>
                     </div><!-- .nk-block-head-content -->
                     <div class="nk-block-head-content">
@@ -27,7 +27,7 @@
                                 <div class="card-inner">
                                     <div class="card-title-group">
                                         <div class="card-title">
-                                            <h6 class="title">Salahh</h6>
+                                            <h6 class="title">Egyptian King</h6>
                                         </div>
                                     </div>
                                 </div><!-- .card-inner -->
@@ -40,7 +40,7 @@
                                 <div class="card-inner">
                                     <div class="card-title-group">
                                         <div class="card-title">
-                                            <h6 class="title">Benar</h6>
+                                            <h6 class="title">Mo Salaaa</h6>
                                         </div>
                                     </div>
                                 </div><!-- .card-inner -->
