@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DoctorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/patient/{id}', [PatientController::class, 'getPatient'])->name('patient.get');
     Route::delete('/patient/{id}/delete', [PatientController::class, 'delete'])->name('patient.delete');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    // Dokter
+    Route::get('/dokter', [DoctorController::class, 'index'])->name('doctor.index');
 });
 
 Route::middleware('guest')->group(function () {

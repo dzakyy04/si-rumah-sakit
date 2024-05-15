@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Doctor;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
 
 class DoctorSeeder extends Seeder
 {
@@ -13,156 +14,168 @@ class DoctorSeeder extends Seeder
      */
     public function run(): void
     {
+        $faker = Faker::create('id_ID');
+        
         // Female Doctors
         Doctor::create([
-            'name' => 'Dr. Angelina Jolie, Sp.A',
+            'name' => 'dr. Angelina Jolie',
             'gender' => 'Female',
-            'speciality' => 'Anak',
-            'email' => 'angelina.jolie@gmail.com',
+            'speciality_id' => 1,
+            'email' => 'jolie@gmail.com',
             'phone_number' => '081234567890',
-            'address' => 'Jl. Sudirman No. 123, Palembang',
-            'photo' => asset('images/doctors/female-doctor1.jpg')
+            'photo' => asset('images/doctors/female-doctor1.jpg'),
+            'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
         Doctor::create([
-            'name' => 'Dr. Emma Watson',
+            'name' => 'dr. Emma Watson, Sp.PD',
             'gender' => 'Female',
-            'speciality' => 'Umum',
-            'email' => 'emma.watson@gmail.com',
+            'speciality_id' => 2,
+            'email' => 'emma@gmail.com',
             'phone_number' => '081234567891',
-            'address' => 'Jl. Ahmad Yani No. 45, Palembang',
-            'photo' => asset('images/doctors/female-doctor2.jpg')
+            'photo' => asset('images/doctors/female-doctor2.jpg'),
+            'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
         Doctor::create([
-            'name' => 'Dr. Jennifer Lopez Sp.S',
+            'name' => 'dr. Jennifer Lopez Sp.A',
             'gender' => 'Female',
-            'speciality' => 'Saraf',
-            'email' => 'jennifer.lopez@gmail.com',
+            'speciality_id' => 3,
+            'email' => 'jennifer@gmail.com',
             'phone_number' => '081234567892',
-            'address' => 'Jl. Imam Bonjol No. 56, Palembang',
-            'photo' => asset('images/doctors/female-doctor3.jpg')
+            'photo' => asset('images/doctors/female-doctor3.jpg'),
+            'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
         Doctor::create([
-            'name' => 'Dr. Serena Williams, Sp.THT-KL',
+            'name' => 'dr. Zendaya, Sp.N',
             'gender' => 'Female',
-            'speciality' => 'THT',
-            'email' => 'serena.williams@gmail.com',
+            'speciality_id' => 4,
+            'email' => 'zendaya@gmail.com',
             'phone_number' => '081234567896',
-            'address' => 'Jl. S. Parman No. 34, Palembang',
-            'photo' => asset('images/doctors/female-doctor4.jpg')
+            'photo' => asset('images/doctors/female-doctor4.jpg'),
+            'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
         Doctor::create([
-            'name' => 'Dr. Beyoncé Knowles, Sp.OT',
+            'name' => 'dr. Beyoncé Knowles, Sp.OG',
             'gender' => 'Female',
-            'speciality' => 'Orthopedi',
-            'email' => 'beyonce.knowles@gmail.com',
+            'speciality_id' => 5,
+            'email' => 'beyonce@gmail.com',
             'phone_number' => '081234567897',
-            'address' => 'Jl. Tanjung No. 21, Palembang',
-            'photo' => asset('images/doctors/female-doctor5.jpg')
+            'photo' => asset('images/doctors/female-doctor5.jpg'),
+            'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
         Doctor::create([
-            'name' => 'Dr. Taylor Swift, Sp.OG',
+            'name' => 'dr. Taylor Swift, Sp.B',
             'gender' => 'Female',
-            'speciality' => 'Kandungan',
-            'email' => 'taylor.swift@gmail.com',
+            'speciality_id' => 6,
+            'email' => 'swift@gmail.com',
             'phone_number' => '081234567898',
-            'address' => 'Jl. Veteran No. 99, Palembang',
-            'photo' => asset('images/doctors/female-doctor6.jpg')
+            'photo' => asset('images/doctors/female-doctor6.jpg'),
+            'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
         Doctor::create([
-            'name' => 'Dr. Rihanna, Sp.B',
+            'name' => 'dr. Rihanna, Sp.KK',
             'gender' => 'Female',
-            'speciality' => 'Bedah',
+            'speciality_id' => 7,
             'email' => 'rihanna@gmail.com',
             'phone_number' => '081234567899',
-            'address' => 'Jl. Kartini No. 76, Palembang',
-            'photo' => asset('images/doctors/female-doctor7.jpg')
+            'photo' => asset('images/doctors/female-doctor7.jpg'),
+            'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
         Doctor::create([
-            'name' => 'Dr. Olivia Rodrigo, Sp.OG',
+            'name' => 'dr. Olivia Rodrigo, Sp.THT',
             'gender' => 'Female',
-            'speciality' => 'Kandungan',
-            'email' => 'olivia.rodrigo@gmail.com',
+            'speciality_id' => 8,
+            'email' => 'olivia@gmail.com',
             'phone_number' => '081234567899',
-            'address' => 'Jl. Basuki Rahmat, Palembang',
-            'photo' => asset('images/doctors/female-doctor8.jpg')
+            'photo' => asset('images/doctors/female-doctor8.jpg'),
+            'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
+        ]);
+
+        Doctor::create([
+            'name' => 'dr. Katy Perry, Sp.M',
+            'gender' => 'Female',
+            'speciality_id' => 9,
+            'email' => 'katy@gmail.com',
+            'phone_number' => '081234567899',
+            'photo' => asset('images/doctors/female-doctor9.jpg'),
+            'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
         // Male Doctors
         Doctor::create([
-            'name' => 'Dr. Lionel Messi, Sp.S',
+            'name' => 'dr. David Beckham',
             'gender' => 'Male',
-            'speciality' => 'Saraf',
-            'email' => 'lionel.messi@gmail.com',
-            'phone_number' => '081234567893',
-            'address' => 'Jl. Diponegoro No. 67, Palembang',
-            'photo' => asset('images/doctors/male-doctor1.jpg')
-        ]);
-
-        Doctor::create([
-            'name' => 'Dr. Cristiano Ronaldo, Sp.PD',
-            'gender' => 'Male',
-            'speciality' => 'Penyakit Dalam',
-            'email' => 'cristiano.ronaldo@gmail.com',
-            'phone_number' => '081234567894',
-            'address' => 'Jl. Kapten A. Rivai No. 78, Palembang',
-            'photo' => asset('images/doctors/male-doctor2.jpg')
-        ]);
-
-        Doctor::create([
-            'name' => 'Dr. David Beckham, Sp.THT-KL',
-            'gender' => 'Male',
-            'speciality' => 'THT',
-            'email' => 'david.beckham@gmail.com',
+            'speciality_id' => 1,
+            'email' => 'beckham@gmail.com',
             'phone_number' => '081234567895',
-            'address' => 'Jl. Jenderal Sudirman No. 90, Palembang',
-            'photo' => asset('images/doctors/male-doctor3.jpg')
+            'photo' => asset('images/doctors/male-doctor1.jpg'),
+            'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
         Doctor::create([
-            'name' => 'Dr. Leonardo DiCaprio, Sp.OT',
+            'name' => 'dr. Lionel Messi, Sp.PD',
             'gender' => 'Male',
-            'speciality' => 'Orthopedi',
-            'email' => 'leonardo.dicaprio@gmail.com',
+            'speciality_id' => 2,
+            'email' => 'messi@gmail.com',
+            'phone_number' => '081234567893',
+            'photo' => asset('images/doctors/male-doctor2.jpg'),
+            'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
+        ]);
+
+        Doctor::create([
+            'name' => 'dr. Cristiano Ronaldo, Sp.A',
+            'gender' => 'Male',
+            'speciality_id' => 3,
+            'email' => 'ronaldo@gmail.com',
+            'phone_number' => '081234567894',
+            'photo' => asset('images/doctors/male-doctor3.jpg'),
+            'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
+        ]);
+
+        Doctor::create([
+            'name' => 'dr. Leonardo DiCaprio, Sp.N',
+            'gender' => 'Male',
+            'speciality_id' => 4,
+            'email' => 'dicaprio@gmail.com',
             'phone_number' => '081234567810',
-            'address' => 'Jl. Ganesha No. 54, Palembang',
-            'photo' => asset('images/doctors/male-doctor4.jpg')
+            'photo' => asset('images/doctors/male-doctor4.jpg'),
+            'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
         Doctor::create([
-            'name' => 'Dr. Will Smith, Sp.OG',
+            'name' => 'dr. Will Smith, Sp.OG',
             'gender' => 'Male',
-            'speciality' => 'Kandungan',
-            'email' => 'will.smith@gmail.com',
+            'speciality_id' => 5,
+            'email' => 'smith@gmail.com',
             'phone_number' => '081234567811',
-            'address' => 'Jl. Pahlawan No. 22, Palembang',
-            'photo' => asset('images/doctors/male-doctor5.jpg')
+            'photo' => asset('images/doctors/male-doctor5.jpg'),
+            'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
         Doctor::create([
-            'name' => 'Dr. Tom Cruise, Sp.B',
+            'name' => 'dr. Tom Cruise, Sp.B',
             'gender' => 'Male',
-            'speciality' => 'Bedah',
-            'email' => 'tom.cruise@gmail.com',
+            'speciality_id' => 6,
+            'email' => 'cruise@gmail.com',
             'phone_number' => '081234567812',
-            'address' => 'Jl. Majapahit No. 63, Palembang',
-            'photo' => asset('images/doctors/male-doctor6.jpg')
+            'photo' => asset('images/doctors/male-doctor6.jpg'),
+            'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
         Doctor::create([
-            'name' => 'Dr. Brad Pitt',
+            'name' => 'dr. Brad Pitt, Sp.KK',
             'gender' => 'Male',
-            'speciality' => 'Umum',
+            'speciality_id' => 7,
             'email' => 'brad.pitt@gmail.com',
             'phone_number' => '081234567813',
-            'address' => 'Jl. Jend. Gatot Subroto No. 88, Palembang',
-            'photo' => asset('images/doctors/male-doctor7.jpg')
+            'photo' => asset('images/doctors/male-doctor7.jpg'),
+            'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
     }
 }
