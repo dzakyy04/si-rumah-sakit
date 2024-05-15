@@ -16,6 +16,10 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
+Route::get('/', function() {
+    return view('frontend.index');
+});
+
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::get('/patient', [PatientController::class, 'index'])->name('patient.index');
