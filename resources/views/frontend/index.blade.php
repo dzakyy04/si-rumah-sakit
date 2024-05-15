@@ -1623,6 +1623,109 @@ l22.3,21.7c1.7,1.7,2.5,4.1,2.1,6.5l-5.3,30.7l27.5-14.5C253.4,228.9,254.5,228.6,2
                 </div><!-- .container -->
             </section><!-- .section -->
 
+            <section class="section section-team pb-0" id="dokter">
+                <div class="container">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-xl-9 col-lg-12">
+                            <div class="section-head">
+                                <h2 class="title text-dark px-1">Punya pertanyaan atau butuh bantuan? Tim dokter kami
+                                    siap membantu Anda!</h2>
+                                <p>Jika Anda memiliki pertanyaan atau membutuhkan dukungan medis, jangan ragu untuk
+                                    menghubungi kami. Tim dokter kami yang berpengalaman selalu siap memberikan bantuan
+                                    dan solusi terbaik untuk kebutuhan kesehatan Anda.
+                                </p>
+                            </div>
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                    <div class="row g-gs justify-content-center">
+                        <div class="col-lg-3 col-sm-6 col-mb-6">
+                            <div class="team team-s1">
+                                <div class="team-portrait">
+                                    <img src="{{ asset('assets-frontend/images/team/a.jpg') }}" alt="">
+                                </div>
+                                <div class="team-info">
+                                    <h6 class="team-name">Marthe Dodier</h6>
+                                    <div class="team-role">Dokter Umum</div>
+                                    <ul class="social social-primary">
+                                        <li><a href="#"><em class="icon ni ni-twitter"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-facebook-f"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-instagram"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-pinterest"></em></a></li>
+                                    </ul>
+                                    <!--.social link-->
+                                </div>
+                            </div>
+                            <!--team-->
+                        </div>
+                        <!--col-->
+                        <div class="col-lg-3 col-sm-6 col-mb-6">
+                            <div class="team team-s1">
+                                <div class="team-portrait">
+                                    <img src="{{ asset('assets-frontend/images/team/b.jpg') }}" alt="">
+                                </div>
+                                <div class="team-info">
+                                    <h6 class="team-name">Kathleen Castro</h6>
+                                    <div class="team-role">Dokter Anak</div>
+                                    <ul class="social social-primary">
+                                        <li><a href="#"><em class="icon ni ni-twitter"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-facebook-f"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-instagram"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-pinterest"></em></a></li>
+                                    </ul>
+                                    <!--.social link-->
+                                </div>
+                                <!--=team info=-->
+                            </div>
+                            <!--team-->
+                        </div>
+                        <!--col-->
+                        <div class="col-lg-3 col-sm-6 col-mb-6">
+                            <div class="team team-s1">
+                                <div class="team-portrait">
+                                    <img src="{{ asset('assets-frontend/images/team/c.jpg') }}" alt="">
+                                </div>
+                                <div class="team-info">
+                                    <h6 class="team-name">Agraman Bourde</h6>
+                                    <div class="team-role">Dokter Kandungan</div>
+                                    <ul class="social social-primary">
+                                        <li><a href="#"><em class="icon ni ni-twitter"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-facebook-f"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-instagram"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-pinterest"></em></a></li>
+                                    </ul>
+                                    <!--.social link-->
+                                </div>
+                                <!--=team info=-->
+                            </div>
+                            <!--team-->
+                        </div>
+                        <!--col-->
+                        <div class="col-lg-3 col-sm-6 col-mb-6">
+                            <div class="team team-s1">
+                                <div class="team-portrait">
+                                    <img src="{{ asset('assets-frontend/images/team/d.jpg') }}" alt="">
+                                </div>
+                                <div class="team-info">
+                                    <h6 class="team-name">Loring Duperra</h6>
+                                    <div class="team-role">Dokter Spesialis Kulit</div>
+                                    <ul class="social social-primary">
+                                        <li><a href="#"><em class="icon ni ni-twitter"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-facebook-f"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-instagram"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-pinterest"></em></a></li>
+                                    </ul>
+                                    <!--.social link-->
+                                </div>
+                                <!--=team info=-->
+                            </div>
+                            <!--team-->
+                        </div>
+                        <!--col-->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </section>
+
+
             <section class="section secton-cta" id="appointment">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -1743,107 +1846,7 @@ l22.3,21.7c1.7,1.7,2.5,4.1,2.1,6.5l-5.3,30.7l27.5-14.5C253.4,228.9,254.5,228.6,2
                     </div><!-- .row -->
                 </div><!-- .container -->
             </section><!-- .section -->
-            <section class="section section-team pb-0" id="dokter">
-                <div class="container">
-                    <div class="row justify-content-center text-center">
-                        <div class="col-xl-9 col-lg-12">
-                            <div class="section-head">
-                                <h2 class="title text-dark px-1">Punya pertanyaan atau butuh bantuan? Tim dokter kami
-                                    siap membantu Anda!</h2>
-                                <p>Jika Anda memiliki pertanyaan atau membutuhkan dukungan medis, jangan ragu untuk
-                                    menghubungi kami. Tim dokter kami yang berpengalaman selalu siap memberikan bantuan
-                                    dan solusi terbaik untuk kebutuhan kesehatan Anda.
-                                </p>
-                            </div>
-                        </div><!-- .col -->
-                    </div><!-- .row -->
-                    <div class="row g-gs justify-content-center">
-                        <div class="col-lg-3 col-sm-6 col-mb-6">
-                            <div class="team team-s1">
-                                <div class="team-portrait">
-                                    <img src="{{ asset('assets-frontend/images/team/a.jpg') }}" alt="">
-                                </div>
-                                <div class="team-info">
-                                    <h6 class="team-name">Marthe Dodier</h6>
-                                    <div class="team-role">Dokter Umum</div>
-                                    <ul class="social social-primary">
-                                        <li><a href="#"><em class="icon ni ni-twitter"></em></a></li>
-                                        <li><a href="#"><em class="icon ni ni-facebook-f"></em></a></li>
-                                        <li><a href="#"><em class="icon ni ni-instagram"></em></a></li>
-                                        <li><a href="#"><em class="icon ni ni-pinterest"></em></a></li>
-                                    </ul>
-                                    <!--.social link-->
-                                </div>
-                            </div>
-                            <!--team-->
-                        </div>
-                        <!--col-->
-                        <div class="col-lg-3 col-sm-6 col-mb-6">
-                            <div class="team team-s1">
-                                <div class="team-portrait">
-                                    <img src="{{ asset('assets-frontend/images/team/b.jpg') }}" alt="">
-                                </div>
-                                <div class="team-info">
-                                    <h6 class="team-name">Kathleen Castro</h6>
-                                    <div class="team-role">Dokter Anak</div>
-                                    <ul class="social social-primary">
-                                        <li><a href="#"><em class="icon ni ni-twitter"></em></a></li>
-                                        <li><a href="#"><em class="icon ni ni-facebook-f"></em></a></li>
-                                        <li><a href="#"><em class="icon ni ni-instagram"></em></a></li>
-                                        <li><a href="#"><em class="icon ni ni-pinterest"></em></a></li>
-                                    </ul>
-                                    <!--.social link-->
-                                </div>
-                                <!--=team info=-->
-                            </div>
-                            <!--team-->
-                        </div>
-                        <!--col-->
-                        <div class="col-lg-3 col-sm-6 col-mb-6">
-                            <div class="team team-s1">
-                                <div class="team-portrait">
-                                    <img src="{{ asset('assets-frontend/images/team/c.jpg') }}" alt="">
-                                </div>
-                                <div class="team-info">
-                                    <h6 class="team-name">Agraman Bourde</h6>
-                                    <div class="team-role">Dokter Kandungan</div>
-                                    <ul class="social social-primary">
-                                        <li><a href="#"><em class="icon ni ni-twitter"></em></a></li>
-                                        <li><a href="#"><em class="icon ni ni-facebook-f"></em></a></li>
-                                        <li><a href="#"><em class="icon ni ni-instagram"></em></a></li>
-                                        <li><a href="#"><em class="icon ni ni-pinterest"></em></a></li>
-                                    </ul>
-                                    <!--.social link-->
-                                </div>
-                                <!--=team info=-->
-                            </div>
-                            <!--team-->
-                        </div>
-                        <!--col-->
-                        <div class="col-lg-3 col-sm-6 col-mb-6">
-                            <div class="team team-s1">
-                                <div class="team-portrait">
-                                    <img src="{{ asset('assets-frontend/images/team/d.jpg') }}" alt="">
-                                </div>
-                                <div class="team-info">
-                                    <h6 class="team-name">Loring Duperra</h6>
-                                    <div class="team-role">Dokter Spesialis Kulit</div>
-                                    <ul class="social social-primary">
-                                        <li><a href="#"><em class="icon ni ni-twitter"></em></a></li>
-                                        <li><a href="#"><em class="icon ni ni-facebook-f"></em></a></li>
-                                        <li><a href="#"><em class="icon ni ni-instagram"></em></a></li>
-                                        <li><a href="#"><em class="icon ni ni-pinterest"></em></a></li>
-                                    </ul>
-                                    <!--.social link-->
-                                </div>
-                                <!--=team info=-->
-                            </div>
-                            <!--team-->
-                        </div>
-                        <!--col-->
-                    </div><!-- .row -->
-                </div><!-- .container -->
-            </section>
+
             <section class="section section-reviews" id="reviews">
                 <div class="container">
                     <div class="row justify-content-lg-center text-lg-center">
