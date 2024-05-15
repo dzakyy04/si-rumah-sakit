@@ -12,8 +12,11 @@
                         <div class="nk-block-head-content">
                             <ul class="nk-block-tools g-3">
                                 <li class="nk-block-tools-opt">
-                                    <a href="html/hospital/doctor-nurse-add.html"
-                                        class="btn btn-icon btn-primary d-md-none"><em class="icon ni ni-plus"></em></a>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#searchModal"
+                                        class="btn btn-outline-secondary d-none d-md-inline-flex"><em
+                                            class="icon ni ni-search"></em><span>Pencarian</span></button>
+                                </li>
+                                <li class="nk-block-tools-opt">
                                     <a href="html/hospital/doctor-nurse-add.html"
                                         class="btn btn-primary d-none d-md-inline-flex"><em
                                             class="icon ni ni-plus"></em><span>Tambah Dokter</span></a>
@@ -64,7 +67,9 @@
                                         </div>
                                         <ul class="team-info">
                                             <li><span>Poliklinik</span><span>{{ $doctor->speciality->name }}</span></li>
-                                            <li><span>Jenis Kelamin</span><span>{{ $doctor->gender == 'Male' ? 'Laki-Laki' : 'Perempuan' }}</span></li>
+                                            <li><span>Jenis
+                                                    Kelamin</span><span>{{ $doctor->gender == 'Male' ? 'Laki-Laki' : 'Perempuan' }}</span>
+                                            </li>
                                             <li><span>Tanggal
                                                     Bergabung</span><span>{{ \Carbon\Carbon::parse($doctor->join_date)->format('d M Y') }}</span>
                                             </li>
@@ -77,6 +82,51 @@
                         </div><!-- .col -->
                     @endforeach
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="searchModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cari Dokter</h5>
+                    <a href="#" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <em class="icon ni ni-cross"></em>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="GET">
+                        <div class="form-group">
+                            <label for="nama">Nama:</label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Ketikkan nama dokter yang ingin dicari">
+                        </div>
+                        <div class="form-group">
+                            <label for="jenis_kelamin">Jenis Kelamin:</label>
+                            <select class="form-control" id="jenis_kelamin" name="jenis_kelamin">
+                                <option disabled selected>Pilih Jenis Kelamin</option>
+                                <option value="laki-laki">Laki-laki</option>
+                                <option value="perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="spesialis">Spesialis:</label>
+                            <select class="form-control" id="spesialis" name="spesialis">
+                                <option disabled selected>Pilih Spesialis</option>
+                                @php
+                                    $specialities = ['Umum', 'Penyakit Dalam', 'Anak', 'Saraf', 'Kandungan dan Ginekologi', 'Bedah', 'Kulit dan Kelamin', 'THT', 'Mata'];
+                                @endphp
+                                @foreach ($specialities as $speciality)
+                                    <option value="{{ $speciality }}">{{ $speciality }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form-group text-end mt-3">
+                            <button type="submit" class="btn btn-lg btn-primary">Cari</button>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </div>
     </div>
