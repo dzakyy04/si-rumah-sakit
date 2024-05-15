@@ -99,25 +99,44 @@
                     <form action="" method="GET">
                         <div class="form-group">
                             <label for="nama">Nama:</label>
-                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Ketikkan nama dokter yang ingin dicari">
+                            <input type="text" class="form-control" id="nama" name="nama"
+                                placeholder="Ketikkan nama dokter yang ingin dicari">
                         </div>
                         <div class="form-group">
                             <label for="jenis_kelamin">Jenis Kelamin:</label>
                             <select class="form-control" id="jenis_kelamin" name="jenis_kelamin">
+                                @php
+                                    $selectedGender = request()->input('jenis_kelamin');
+                                @endphp
                                 <option disabled selected>Pilih Jenis Kelamin</option>
-                                <option value="laki-laki">Laki-laki</option>
-                                <option value="perempuan">Perempuan</option>
+                                <option value="laki-laki" {{ $selectedGender == 'laki-laki' ? 'selected' : '' }}>Laki-laki
+                                </option>
+                                <option value="perempuan" {{ $selectedGender == 'perempuan' ? 'selected' : '' }}>Perempuan
+                                </option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="spesialis">Spesialis:</label>
                             <select class="form-control" id="spesialis" name="spesialis">
-                                <option disabled selected>Pilih Spesialis</option>
                                 @php
-                                    $specialities = ['Umum', 'Penyakit Dalam', 'Anak', 'Saraf', 'Kandungan dan Ginekologi', 'Bedah', 'Kulit dan Kelamin', 'THT', 'Mata'];
+                                    $specialities = [
+                                        'Anak',
+                                        'Bedah',
+                                        'Kandungan dan Ginekologi',
+                                        'Kulit dan Kelamin',
+                                        'Mata',
+                                        'Penyakit Dalam',
+                                        'Saraf',
+                                        'THT',
+                                        'Umum',
+                                    ];
+                                    $selectedSpeciality = request()->input('spesialis');
                                 @endphp
+                                <option disabled selected>Pilih Spesialis</option>
                                 @foreach ($specialities as $speciality)
-                                    <option value="{{ $speciality }}">{{ $speciality }}</option>
+                                    <option value="{{ $speciality }}"
+                                        {{ $selectedSpeciality == $speciality ? 'selected' : '' }}>{{ $speciality }}
+                                    </option>
                                 @endforeach
                             </select>
                         </div>
