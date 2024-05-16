@@ -275,7 +275,6 @@ l22.3,21.7c1.7,1.7,2.5,4.1,2.1,6.5l-5.3,30.7l27.5-14.5C253.4,228.9,254.5,228.6,2
                                             <h5 class="title text-dark">Rekam Medis Digital</h5>
                                             <p>Akses dan kelola riwayat medis Anda kapan saja, dengan mudah dan aman.
                                             </p>
-
                                         </div>
                                     </div>
                                 </div><!-- .service -->
@@ -295,7 +294,7 @@ l22.3,21.7c1.7,1.7,2.5,4.1,2.1,6.5l-5.3,30.7l27.5-14.5C253.4,228.9,254.5,228.6,2
                         <div class="col-lg-6">
                             <div class="text-block">
                                 <h3 class="title fw-medium">Layanan Rumah Sakit Komprehensif Kami</h3>
-                                <p>Di Rumah Sakit kami, kami berkomitmen untuk menyediakan layanan kesehatan berkualitas
+                                <p>Di rumah sakit kami, kami berkomitmen untuk menyediakan layanan kesehatan berkualitas
                                     tinggi yang disesuaikan dengan kebutuhan unik Anda. Tim profesional medis
                                     berpengalaman kami berdedikasi untuk memberikan perawatan yang dipersonalisasi,
                                     memastikan setiap pasien menerima pengobatan dan dukungan terbaik.</p>
@@ -316,8 +315,7 @@ l22.3,21.7c1.7,1.7,2.5,4.1,2.1,6.5l-5.3,30.7l27.5-14.5C253.4,228.9,254.5,228.6,2
                         <div class="col-lg-5">
                             <div class="text-block is-dark pe-xl-5">
                                 <h2 class="title">Apa saja fasilitas di rumah sakit ini?</h2>
-                                <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur,
-                                    vero.</p>
+                                 <p class="lead">Nikmati fasilitas terbaik yang telah kami sediakan untuk kenyamanan dan kesembuhan Anda.</p>
                             </div><!-- .text-block -->
                         </div><!-- .col -->
                         <div class="col-lg-7">
@@ -1760,7 +1758,7 @@ l22.3,21.7c1.7,1.7,2.5,4.1,2.1,6.5l-5.3,30.7l27.5-14.5C253.4,228.9,254.5,228.6,2
                                                     <li>Tidak perlu antri panjang di rumah sakit!</li>
                                                     <li>Dengan fitur janji temu kami,</li>
                                                     <li>Buat janji temu secara online dan mudah</li>
-                                                    <li>Dapatkan konfirmasi melalui email</li>
+                                                    <li>Dapatkan konfirmasi melalui Whatsapp</li>
                                                     <li class="note text-warning">Berobat jadi lebih efisien!</li>
                                                 </ul>
                                             </div>
