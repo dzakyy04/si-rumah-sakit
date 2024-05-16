@@ -25,8 +25,7 @@
                     form.find('#edit_strength').val(data.strength);
                     form.find('#edit_manufacturer_name').val(data.manufacturer_name);
                     form.find('#edit_unit').val(data.unit);
-                    form.find('#edit_unit_size').val(data.unit_size);
-                    form.find('#edit_price').val(data.price);
+                    form.find('#edit_stock').val(data.stock);
                     // Jika ada field lain, Anda dapat menambahkannya di sini
                 });
 
@@ -90,7 +89,7 @@
                             <th class="nk-tb-col tb-col-mb"><span class="sub-text">Nama</span></th>
                             <th class="nk-tb-col tb-col-mb"><span class="sub-text">Kategori</span></th>
                             <th class="nk-tb-col tb-col-md"><span class="sub-text">General</span></th>
-                            <th class="nk-tb-col tb-col-lg"><span class="sub-text">Price</span></th>
+                            <th class="nk-tb-col tb-col-lg"><span class="sub-text">Stok</span></th>
                             <th class="nk-tb-col nk-tb-col-tools text-end">Action
                             </th>
                         </tr>
@@ -113,7 +112,7 @@
                                     <span>{{ $medicine->generic_name }}</span>
                                 </td>
                                 <td class="nk-tb-col tb-col-lg">
-                                    <span>{{ $medicine->price }}</span>
+                                    <span>{{ $medicine->stock }}</span>
                                 </td>
                                 <td class="nk-tb-col nk-tb-col-tools">
                                     <ul class="nk-tb-actions gx-1">
@@ -216,17 +215,10 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="form-label" for="add_unit_size">Ukuran Unit</label>
+                            <label class="form-label" for="add_stock">Stok</label>
                             <div class="form-control-wrap">
-                                <input type="number" class="form-control" id="add_unit_size" name="unit_size"
+                                <input type="number" class="form-control" id="add_stock" name="stock"
                                     placeholder="Ukuran Unit">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="add_price">Harga</label>
-                            <div class="form-control-wrap">
-                                <input type="number" class="form-control" id="add_price" name="price"
-                                    placeholder="Harga" required>
                             </div>
                         </div>
                         <div class="form-group text-end">
@@ -303,17 +295,10 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="form-label" for="edit_unit_size">Ukuran Unit</label>
+                            <label class="form-label" for="edit_stock">Stok</label>
                             <div class="form-control-wrap">
-                                <input type="number" class="form-control" id="edit_unit_size" name="unit_size"
-                                    placeholder="Ukuran Unit">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="edit_price">Harga</label>
-                            <div class="form-control-wrap">
-                                <input type="number" class="form-control" id="edit_price" name="price"
-                                    placeholder="Harga" required>
+                                <input type="number" class="form-control" id="edit_stock" name="stock"
+                                    placeholder="Stok">
                             </div>
                         </div>
                         <div class="form-group text-end">

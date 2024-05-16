@@ -37,8 +37,7 @@ public function store(Request $request)
         'strength' => 'nullable|string|max:255',
         'manufacturer_name' => 'nullable|string|max:255',
         'unit' => 'nullable|string|max:255',
-        'unit_size' => 'nullable|string|max:255',
-        'price' => 'required|numeric|min:0',
+        'stock' => 'nullable|max:255',
     ]);
 
     // Menyimpan data ke database menggunakan ORM
@@ -58,8 +57,7 @@ public function update(Request $request, $id)
         'strength' => 'nullable|string|max:255',
         'manufacturer_name' => 'nullable|string|max:255',
         'unit' => 'nullable|string|max:255',
-        'unit_size' => 'nullable|string|max:255',
-        'price' => 'required|numeric|min:0',
+        'stock' => 'nullable|string|max:255',
     ]);
 
     // Mencari medicine berdasarkan ID

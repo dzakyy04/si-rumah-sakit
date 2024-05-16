@@ -20,8 +20,7 @@ return new class extends Migration
             $table->string('strength')->nullable();
             $table->string('manufacturer_name')->nullable();
             $table->string('unit')->nullable();
-            $table->integer('unit_size')->nullable();
-            $table->decimal('price', 10, 2);
+            $table->integer('stock')->nullable();
             $table->timestamps();
         });
     }
