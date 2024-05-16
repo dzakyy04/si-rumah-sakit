@@ -49,6 +49,12 @@
                         </a>
                     </li>
                     <li class="nk-menu-item">
+                        <a href="{{ route('medicine.index') }}" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-capsule"></em></span>
+                            <span class="nk-menu-text"> Obat</span>
+                        </a>
+                    </li>
+                    <li class="nk-menu-item">
                         <a href="{{ route('appointment.index') }}" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-list-index-fill"></em></span>
                             <span class="nk-menu-text">Janji Temu</span>

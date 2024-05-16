@@ -33,7 +33,7 @@
                                     <li class="item">
                                         <div class="info">
                                             <div class="title">Janji Temu</div>
-                                            <div class="count"></div>
+                                            <div class="count">{{ $totalAppointments }}</div>
                                         </div>
                                         <em class="icon ni bg-blue-dim ni-list-index-fill"></em>
                                     </li>

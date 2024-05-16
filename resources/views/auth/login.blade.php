@@ -80,8 +80,6 @@
                                                 name="remember">
                                             <label class="custom-control-label" for="remember">Ingat saya</label>
                                         </div>
-                                        <a href="" class="link link-primary link-sm">Lupa
-                                            password?</a>
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" id="btnSubmit" class="btn btn-lg btn-primary btn-block">

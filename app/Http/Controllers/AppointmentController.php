@@ -56,6 +56,12 @@ class AppointmentController extends Controller
     {
         $appointment->status = 'rejected';
         $appointment->save();
+        $polyclinic = Speciality::find($appointment['polyclinic'])->name;
+        $meeting_date = Carbon::parse($appointment['meeting_date'])->format('d M Y');
+
+        $message = "Halo *$appointment[name]*, maaf, janji temu anda pada tanggal *$meeting_date* di *Poliklinik $polyclinic* dengan *$appointment[doctor]* tidak disetujui karena pada tanggal tersebut pelayanan sudah habis. Terimakasih";
+
+        $this->sendMessage($appointment->phone_number, $message);
 
         return redirect()->back()->with('success', 'Appointment rejected.');
     }
