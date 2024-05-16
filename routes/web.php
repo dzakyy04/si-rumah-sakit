@@ -3,10 +3,11 @@
 use App\Http\Controllers\AppointmentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\PatientController;
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\PatientController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\MedicineController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,13 @@ Route::middleware('auth')->group(function () {
 
     // Janji Temu
     Route::get('/janji-temu', [AppointmentController::class, 'index'])->name('appointment.index');
+    
+    //Obat
+    Route::get('/obat', [MedicineController::class, 'index'])->name('medicine.index');
+    Route::post('/obat', [MedicineController::class, 'store'])->name('medicine.store');
+    Route::get('/obat/{id}', [MedicineController::class, 'getMedicine'])->name('medicine.get');
+    Route::put('/obat/{id}/edit', [MedicineController::class, 'update'])->name('medicine.update');
+    Route::delete('/obat/{id}/hapus', [MedicineController::class, 'destroy'])->name('medicine.destroy');
 });
 
 Route::middleware('guest')->group(function () {

@@ -21,32 +21,48 @@
             </div><!-- .nk-block-head -->
             <div class="nk-block">
                 <div class="row g-gs">
-                    <div class="col-xxl-3 col-sm-6">
-                        <div class="card">
-                            <div class="nk-ecwg nk-ecwg6">
-                                <div class="card-inner">
-                                    <div class="card-title-group">
-                                        <div class="card-title">
-                                            <h6 class="title">Egyptian King</h6>
-                                        </div>
+                    <div class="col-md-6 col-xxl-3">
+                        <div class="card h-100">
+                            <div class="card-inner">
+                                <div class="card-title-group mb-2">
+                                    <div class="card-title">
+                                        <h6 class="title">Hospital Statistics</h6>
                                     </div>
-                                </div><!-- .card-inner -->
-                            </div><!-- .nk-ecwg -->
+                                </div>
+                                <ul class="nk-store-statistics">
+                                    <li class="item">
+                                        <div class="info">
+                                            <div class="title">Janji Temu</div>
+                                            <div class="count"></div>
+                                        </div>
+                                        <em class="icon ni bg-blue-dim ni-list-index-fill"></em>
+                                    </li>
+                                    <li class="item">
+                                        <div class="info">
+                                            <div class="title">Dokter</div>
+                                            <div class="count">{{ $doctors }}</div>
+                                        </div>
+                                        <em class="icon bg-primary-dim ni ni-plus-medi"></em>
+                                    </li>
+                                    <li class="item">
+                                        <div class="info">
+                                            <div class="title">Pasien</div>
+                                            <div class="count">{{ $totalPatients }}</div>
+                                        </div>
+                                        <em class="icon bg-warning-dim ni ni-users"></em>
+                                    </li>
+                                    <li class="item">
+                                        <div class="info">
+                                            <div class="title">Obat</div>
+                                            <div class="count">{{ $medicines }}</div>
+                                        </div>
+                                        <em class="icon bg-danger-dim ni ni-capsule"></em>
+                                    </li>
+                                </ul>
+                            </div><!-- .card-inner -->
                         </div><!-- .card -->
                     </div><!-- .col -->
-                    <div class="col-xxl-3 col-sm-6">
-                        <div class="card">
-                            <div class="nk-ecwg nk-ecwg6">
-                                <div class="card-inner">
-                                    <div class="card-title-group">
-                                        <div class="card-title">
-                                            <h6 class="title">Mo Salaaa</h6>
-                                        </div>
-                                    </div>
-                                </div><!-- .card-inner -->
-                            </div><!-- .nk-ecwg -->
-                        </div><!-- .card -->
-                    </div>
+                    
                 </div><!-- .row -->
             </div><!-- .nk-block -->
         </div>
