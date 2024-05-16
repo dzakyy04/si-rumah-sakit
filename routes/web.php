@@ -41,5 +41,6 @@ Route::middleware('guest')->group(function () {
     Route::post('/login', [AuthController::class, 'login'])->name('login');
 
     Route::get('/dokter-spesialis', [DoctorController::class, 'getDoctorsBySpeciality'])->name('doctor.get.speciality');
+    Route::post('/janji-temu', [FrontendController::class, 'submitAppointment'])->name('appointment.submit');
 });
 

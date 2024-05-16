@@ -315,7 +315,8 @@ l22.3,21.7c1.7,1.7,2.5,4.1,2.1,6.5l-5.3,30.7l27.5-14.5C253.4,228.9,254.5,228.6,2
                         <div class="col-lg-5">
                             <div class="text-block is-dark pe-xl-5">
                                 <h2 class="title">Apa saja fasilitas di rumah sakit ini?</h2>
-                                 <p class="lead">Nikmati fasilitas terbaik yang telah kami sediakan untuk kenyamanan dan kesembuhan Anda.</p>
+                                <p class="lead">Nikmati fasilitas terbaik yang telah kami sediakan untuk kenyamanan
+                                    dan kesembuhan Anda.</p>
                             </div><!-- .text-block -->
                         </div><!-- .col -->
                         <div class="col-lg-7">
@@ -1773,7 +1774,9 @@ l22.3,21.7c1.7,1.7,2.5,4.1,2.1,6.5l-5.3,30.7l27.5-14.5C253.4,228.9,254.5,228.6,2
                                                 <div class="section-head section-head-sm">
                                                     <h4 class="title">Anda ingin membuat janji temu?</h4>
                                                 </div>
-                                                <form action="#" method="POST" class="form-submit">
+                                                <form action="{{ route('appointment.submit') }}" method="POST"
+                                                    class="form-submit">
+                                                    @csrf
                                                     <div class="row g-4">
                                                         <div class="col-12">
                                                             <div class="form-group ">
@@ -1781,8 +1784,8 @@ l22.3,21.7c1.7,1.7,2.5,4.1,2.1,6.5l-5.3,30.7l27.5-14.5C253.4,228.9,254.5,228.6,2
                                                                 <div class="form-control-wrap">
                                                                     <input type="text"
                                                                         class="form-control form-control-lg"
-                                                                        id="name" class="name"
-                                                                        placeholder="Masukkan nama">
+                                                                        id="name" class="name" name="name"
+                                                                        placeholder="Masukkan nama" required>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1791,10 +1794,10 @@ l22.3,21.7c1.7,1.7,2.5,4.1,2.1,6.5l-5.3,30.7l27.5-14.5C253.4,228.9,254.5,228.6,2
                                                                 <label class="form-label" for="email">
                                                                     Email</label>
                                                                 <div class="form-control-wrap">
-                                                                    <input type="text"
+                                                                    <input type="email"
                                                                         class="form-control form-control-lg"
-                                                                        id="email" class="email"
-                                                                        placeholder="Masukkan email">
+                                                                        id="email" class="email" name="email"
+                                                                        placeholder="Masukkan email" required>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1806,7 +1809,8 @@ l22.3,21.7c1.7,1.7,2.5,4.1,2.1,6.5l-5.3,30.7l27.5-14.5C253.4,228.9,254.5,228.6,2
                                                                     <input type="text"
                                                                         class="form-control form-control-lg"
                                                                         id="phone_number" class="phone_number"
-                                                                        placeholder="Masukkan nomor telepon">
+                                                                        name="phone_number"
+                                                                        placeholder="Masukkan nomor telepon" required>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1817,7 +1821,8 @@ l22.3,21.7c1.7,1.7,2.5,4.1,2.1,6.5l-5.3,30.7l27.5-14.5C253.4,228.9,254.5,228.6,2
                                                                 <div class="form-control-wrap">
                                                                     <input type="date"
                                                                         class="form-control form-control-lg"
-                                                                        id="date" class="appointment_date">
+                                                                        name="meeting_date" id="date"
+                                                                        class="appointment_date" required>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1854,10 +1859,27 @@ l22.3,21.7c1.7,1.7,2.5,4.1,2.1,6.5l-5.3,30.7l27.5-14.5C253.4,228.9,254.5,228.6,2
                                                         </div>
                                                         <div class="col-12">
                                                             <div class="form-group">
-                                                                <label class="form-label" for="question">Pesan</label>
+                                                                <label class="form-label"
+                                                                    for="has_visited_before">Apakah sebelumnya anda
+                                                                    sudah pernah berobat disini?</label>
                                                                 <div class="form-control-wrap">
-                                                                    <textarea class="form-control no-resize" id="question" name="question" rows="5"
-                                                                        placeholder="Pertanyaan atau pesanmu"></textarea>
+                                                                    <select id="has_visited_before"
+                                                                        class="form-control form-control-lg form-select js-select2 @error('has_visited_before') is-invalid @enderror"
+                                                                        name="has_visited_before" aria-label="State"
+                                                                        required>
+                                                                        <option disabled selected>Pilih Opsi</option>
+                                                                        <option value="0">Belum Pernah</option>
+                                                                        <option value="1">Sudah Pernah</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="form-group">
+                                                                <label class="form-label" for="message">Pesan</label>
+                                                                <div class="form-control-wrap">
+                                                                    <textarea class="form-control no-resize" id="message" name="message" rows="5"
+                                                                        placeholder="Masukkan pesanmu"></textarea>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -2167,34 +2189,50 @@ l22.3,21.7c1.7,1.7,2.5,4.1,2.1,6.5l-5.3,30.7l27.5-14.5C253.4,228.9,254.5,228.6,2
     <!-- JavaScript -->
     <script src="{{ asset('assets-frontend/js/bundle.js?ver=3.0.3') }}"></script>
     <script src="{{ asset('assets-frontend/js/scripts.js?ver=3.0.3') }}"></script>
-<script>
-    $(document).ready(function() {
-        $('#polyclinic').change(function() {
-            var selectedPolyclinic = $(this).val();
-            var doctorOptions = '<option disabled selected>Pilih Dokter</option>';
+    <script src="{{ asset('assets/js/bundle.js') }}"></script>
+    <script src="{{ asset('assets/js/scripts.js') }}"></script>
+    <script src="{{ asset('assets/js/example-toastr.js') }}"></script>
+    @if (session()->has('success'))
+        <script>
+            let message = @json(session('success'));
+            NioApp.Toast(`<h5>Berhasil</h5><p>${message}</p>`, 'success', {
+                position: 'top-right',
+            });
+        </script>
+    @endif
+    <script>
+        $(document).ready(function() {
 
-            if (selectedPolyclinic) {
-                $.ajax({
-                    url: '{{ route("doctor.get.speciality") }}',
-                    type: 'GET',
-                    data: { speciality_id: selectedPolyclinic },
-                    success: function(response) {
-                        if (response.doctors.length > 0) {
-                            response.doctors.forEach(function(doctor) {
-                                doctorOptions += '<option value="' + doctor.id + '">' + doctor.name + '</option>';
-                            });
-                        } else {
-                            doctorOptions = '<option disabled>Tidak ada dokter untuk poliklinik ini</option>';
+            $('#polyclinic').change(function() {
+                var selectedPolyclinic = $(this).val();
+                var doctorOptions = '<option disabled selected>Pilih Dokter</option>';
+
+                if (selectedPolyclinic) {
+                    $.ajax({
+                        url: '{{ route('doctor.get.speciality') }}',
+                        type: 'GET',
+                        data: {
+                            speciality_id: selectedPolyclinic
+                        },
+                        success: function(response) {
+                            if (response.doctors.length > 0) {
+                                response.doctors.forEach(function(doctor) {
+                                    doctorOptions += '<option value="' + doctor.name +
+                                        '">' + doctor.name + '</option>';
+                                });
+                            } else {
+                                doctorOptions =
+                                    '<option disabled>Tidak ada dokter untuk poliklinik ini</option>';
+                            }
+                            $('#doctor').html(doctorOptions);
                         }
-                        $('#doctor').html(doctorOptions);
-                    }
-                });
-            } else {
-                $('#doctor').html(doctorOptions);
-            }
+                    });
+                } else {
+                    $('#doctor').html(doctorOptions);
+                }
+            });
         });
-    });
-</script>
+    </script>
 </body>
 
 </html>
