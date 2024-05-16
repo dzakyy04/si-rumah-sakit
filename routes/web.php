@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\FrontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,7 @@ use App\Http\Controllers\DoctorController;
 |
 */
 
-Route::get('/', function() {
-    return view('frontend.index');
-});
+Route::get('/', [FrontendController::class, 'index'])->name('home');
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
@@ -34,10 +33,13 @@ Route::middleware('auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
     // Dokter
-    Route::get('/dokter', [DoctorController::class, 'index'])->name('doctor.index');
+    Route::get('/dokter/{specialityName}', [DoctorController::class, 'index'])->name('doctor.index');
 });
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login.view');
     Route::post('/login', [AuthController::class, 'login'])->name('login');
+
+    Route::get('/dokter-spesialis', [DoctorController::class, 'getDoctorsBySpeciality'])->name('doctor.get.speciality');
 });
+

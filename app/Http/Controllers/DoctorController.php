@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Doctor;
+use App\Models\Speciality;
 use Illuminate\Http\Request;
 
 class DoctorController extends Controller
@@ -61,5 +62,11 @@ class DoctorController extends Controller
         ];
 
         return $map[$gender] ?? $gender;
+    }
+
+    public function getDoctorsBySpeciality(Request $request)
+    {
+        $doctors = Doctor::where('speciality_id', $request->speciality_id)->get();
+        return response()->json(['doctors' => $doctors]);
     }
 }

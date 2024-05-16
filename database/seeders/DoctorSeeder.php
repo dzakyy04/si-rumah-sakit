@@ -139,7 +139,7 @@ class DoctorSeeder extends Seeder
         ]);
 
         Doctor::create([
-            'name' => 'dr. Leonardo DiCaprio, Sp.N',
+            'name' => 'dr. Tom Holland, Sp.N',
             'gender' => 'Male',
             'speciality_id' => 4,
             'email' => 'dicaprio@gmail.com',
