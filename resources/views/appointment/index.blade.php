@@ -1,5 +1,35 @@
 @extends('layouts.app')
 
+@push('js')
+<script>
+    $(document).ready(function() {
+
+        $(document).on('show.bs.modal', '#deleteAppointmentModal', async function(event) {
+            const button = $(event.relatedTarget);
+            const id = button.data('id');
+            const modal = $(this);
+            const form = modal.find('#deleteForm');
+
+            $.ajax({
+                url: '{{ route('appointment.get', ':id') }}'.replace(':id', id),
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    form.find('#deleteMessage').html(
+                        `Apakah anda yakin ingin menghapus <strong>${data.name}</strong> sebagai <strong>janji temu</strong>?`
+                    );
+                },
+                error: function(xhr, status, error) {
+                    alert('Data tiak ditemukan');
+                }
+            });
+
+            form.attr('action', '{{ route('appointment.destroy', ':id') }}'.replace(':id', id));
+        });
+    });
+</script>
+@endpush
+
 @section('content')
     <div class="container-fluid">
         <div class="nk-content-inner">
@@ -8,22 +38,7 @@
                     <div class="nk-block-between g-3">
                         <div class="nk-block-head-content">
                             <h3 class="nk-block-title page-title">Daftar Janji Temu</h3>
-                            <div class="nk-block-des text-soft d-none d-md-inline-flex">
-                                <ul class="breadcrumb breadcrumb-pipe">
-                                    <li class="breadcrumb-item active"><a href="#">Today's Total (150)</a></li>
-                                    <li class="breadcrumb-item "><a href="#">Visited (47)</a></li>
-                                    <li class="breadcrumb-item"><a href="#">Waiting (12)</a></li>
-                                    <li class="breadcrumb-item "><a href="#">Canceled (1)</a></li>
-                                </ul>
-                            </div>
                         </div>
-                        <div class="nk-block-head-content">
-                            <a data-bs-toggle="modal" href="#addAppointment" class="btn btn-icon btn-primary d-md-none"><em
-                                    class="icon ni ni-plus"></em></a>
-                            <a data-bs-toggle="modal" href="#addAppointment"
-                                class="btn btn-primary d-none d-md-inline-flex"><em class="icon ni ni-plus"></em><span>Add
-                                    Appointment</span></a>
-                        </div><!-- .nk-block-head-content -->
                     </div>
                 </div><!-- .nk-block-head -->
                 <div class="nk-block">
@@ -87,24 +102,9 @@
                                             </td>
                                             <td class="nk-tb-col">
                                                 <span>{{ $appointment->message }}</span>
-                                            </td>
-                                            <td class="nk-tb-col">
-                                                <span
-                                                    class=" 
-                                                    {{ $appointment->status == 'pending'
-                                                        ? 'text-warning'
-                                                        : ($appointment->status == 'accepted'
-                                                            ? 'text-success'
-                                                            : ($appointment->status == 'rejected'
-                                                                ? 'text-danger'
-                                                                : 'text-secondary')) }}">
-                                                    {{ $appointment->status == 'pending'
-                                                        ? 'Pending'
-                                                        : ($appointment->status == 'accepted'
-                                                            ? 'Approve'
-                                                            : ($appointment->status == 'rejected'
-                                                                ? 'Ditolak'
-                                                                : $appointment->status)) }}
+                                            </td><td class="nk-tb-col">
+                                                <span class="{{ $appointment->status == 'pending' ? 'text-warning' : ($appointment->status == 'approved' ? 'text-success' : ($appointment->status == 'rejected' ? 'text-danger' : 'text-secondary')) }}">
+                                                    {{ $appointment->status == 'pending' ? 'Pending' : ($appointment->status == 'approved' ? 'Approved' : ($appointment->status == 'rejected' ? 'Rejected' : $appointment->status)) }}
                                                 </span>
                                             </td>
 
@@ -118,20 +118,27 @@
                                                                     class="icon ni ni-more-h"></em></a>
                                                             <div class="dropdown-menu dropdown-menu-end">
                                                                 <ul class="link-list-opt no-bdr">
-                                                                    <li><a
-                                                                            href="{{ route('patient.show', $appointment->id) }}"><em
-                                                                                class="icon ni ni-check"></em><span>Konfirmasi</span></a>
+                                                                    <li>
+                                                                        <form action="{{ route('appointments.confirm', $appointment->id) }}" method="POST">
+                                                                            @csrf
+                                                                            @method('PUT')
+                                                                            <button type="submit" class="btn d-flex justify-content-between"><em class="icon ni ni-check"></em><span>Konfirmasi</span></button>
+                                                                        </form>
                                                                     </li>
-                                                                    <li><a
-                                                                            href="{{ route('patient.edit', $appointment->id) }}"><em
-                                                                                class="icon ni ni-cross"></em><span>Tolak</span></a>
+                                                                    <li>
+                                                                        <form action="{{ route('appointments.reject', $appointment->id) }}" method="POST">
+                                                                            @csrf
+                                                                            @method('PUT')
+                                                                            <button type="submit" class="btn d-flex justify-content-between"><em class="icon ni ni-cross"></em><span>Tolak</span></button>
+                                                                        </form>
                                                                     </li>
-                                                                    <li> <a data-bs-toggle="modal"
-                                                                            data-bs-target="#deletePatientModal"
-                                                                            data-id="{{ $appointment->id }}">
-                                                                            <em
-                                                                                class="icon ni ni-trash"></em><span>Hapus</span>
-                                                                        </a>
+                                                                    <li> <button type="button"
+                                                                        class="btn d-flex justify-content-between"
+                                                                        data-bs-toggle="modal" data-bs-target="#deleteAppointmentModal"
+                                                                        data-modal-title="Hapus Appointment"
+                                                                        data-id="{{ $appointment->id }}">
+                                                                        <em class="icon ni ni-trash me-3"></em>Hapus
+                                                                    </button>
                                                                     </li>
                                                                 </ul>
                                                             </div>
@@ -152,4 +159,28 @@
         </div>
     </div>
     </div>
+
+        {{-- Delete Modal --}}
+        <div class="modal fade" id="deleteAppointmentModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Hapus Obat</h5>
+                        <a href="#" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <em class="icon ni ni-cross"></em>
+                        </a>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="POST" class="form-validate is-alter" id="deleteForm">
+                            @csrf
+                            @method('delete')
+                            <div id="deleteMessage"></div>
+                            <div class="form-group text-end mt-3">
+                                <button type="submit" class="btn btn-lg btn-danger">Hapus</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 @endsection

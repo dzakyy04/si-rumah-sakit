@@ -43,9 +43,15 @@
                         </a>
                     </li>
                     <li class="nk-menu-item">
-                        <a href="" class="nk-menu-link">
+                        <a href="{{ route('doctor.index') }}" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-plus-medi-fill"></em></span>
                             <span class="nk-menu-text">Dokter</span>
+                        </a>
+                    </li>
+                    <li class="nk-menu-item">
+                        <a href="{{ route('appointment.index') }}" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-list-index-fill"></em></span>
+                            <span class="nk-menu-text">Janji Temu</span>
                         </a>
                     </li>
                 </ul>
