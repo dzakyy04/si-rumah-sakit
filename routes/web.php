@@ -33,7 +33,11 @@ Route::middleware('auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
     // Dokter
-    Route::get('/dokter/{specialityName}', [DoctorController::class, 'index'])->name('doctor.index');
+    Route::get('/dokter', [DoctorController::class, 'index'])->name('doctor.index');
+    Route::post('/dokter', [DoctorController::class, 'store'])->name('doctor.store');
+    Route::get('/dokter/{id}', [DoctorController::class, 'getDoctor'])->name('doctor.get');
+    Route::put('/dokter/{id}/edit', [DoctorController::class, 'update'])->name('doctor.update');
+    Route::delete('/dokter/{id}/hapus', [DoctorController::class, 'destroy'])->name('doctor.destroy');
 });
 
 Route::middleware('guest')->group(function () {
