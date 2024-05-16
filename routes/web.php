@@ -43,7 +43,7 @@ Route::middleware('auth')->group(function () {
 
     // Janji Temu
     Route::get('/janji-temu', [AppointmentController::class, 'index'])->name('appointment.index');
-    
+
     //Obat
     Route::get('/obat', [MedicineController::class, 'index'])->name('medicine.index');
     Route::post('/obat', [MedicineController::class, 'store'])->name('medicine.store');
@@ -60,3 +60,8 @@ Route::middleware('guest')->group(function () {
 
 Route::get('/dokter-spesialis', [DoctorController::class, 'getDoctorsBySpeciality'])->name('doctor.get.speciality');
 Route::post('/janji-temu', [FrontendController::class, 'submitAppointment'])->name('appointment.submit');
+Route::get('/janji-temu/{id}', [AppointmentController::class, 'getAppointment'])->name('appointment.get');
+Route::put('/janji-temu/{appointment}/confirm', [AppointmentController::class, 'confirm'])->name('appointments.confirm');
+Route::put('/janji-temu/{appointment}/reject', [AppointmentController::class, 'reject'])->name('appointments.reject');
+Route::delete('/janji-temu/{id}/', [AppointmentController::class, 'destroy'])->name('appointment.destroy');
+
