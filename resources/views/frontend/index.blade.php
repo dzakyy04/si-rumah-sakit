@@ -74,9 +74,7 @@
                                             untuk mendaftar dan mengakses layanan kesehatan yang mudah dan efisien.</p>
                                     </div>
                                     <ul class="header-action btns-inline">
-                                        <li><a href="#appointment" class="btn btn-primary btn-lg btn-round"><span>Buat
-                                                    janji
-                                                    temu!</span></a></li>
+                                        <li><a href="#appointment" class="btn btn-primary btn-lg btn-round"><span>Buat Janji Temu!</span></a></li>
                                     </ul>
                                 </div><!-- .header-caption -->
                             </div><!-- .col -->
