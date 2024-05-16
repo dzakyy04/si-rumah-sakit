@@ -211,9 +211,7 @@ c1.9,1.9,4.4,2.9,7.1,2.9s5.2-1.1,7.1-2.9c1.9-1.9,2.9-4.4,2.9-7.1C143.5,171.9,142
                                         </div>
                                         <div class="service-text">
                                             <h5 class="title text-dark">Pendaftaran Online</h5>
-                                            <p>Mudahkan proses pendaftaran janji temu dengan dokter secara online, cepat
-                                                dan efisien.</p>
-
+                                            <p>Permudah proses pendaftaran janji temu dengan dokter secara online agar cepat dan efisien.</p>
                                         </div>
                                     </div><!-- .service -->
                                 </div>
