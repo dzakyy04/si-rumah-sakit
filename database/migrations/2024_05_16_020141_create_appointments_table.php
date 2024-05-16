@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('doctor');
             $table->text('message');
             $table->boolean('has_visited_before')->default(false);
-            $table->enum('status', ['pending', 'accepted', 'rejected'])->default('pending');
+            $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending');
             $table->timestamps();
         });
     }

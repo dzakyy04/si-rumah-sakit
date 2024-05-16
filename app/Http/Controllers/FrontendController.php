@@ -33,8 +33,9 @@ class FrontendController extends Controller
         Appointment::create($appointment);
 
         $meeting_date = Carbon::parse($appointment['meeting_date'])->format('d M Y');
+        $polyclinic = Speciality::find($appointment['polyclinic'])->name;
 
-        $message = "Halo *$appointment[name]*, anda telah membuat janji temu pada tanggal *$meeting_date* di *Poliklinik $appointment[polyclinic]* dengan *$appointment[doctor]*. Saat ini, status janji temu Anda masih *pending*. Kami akan segera memprosesnya. Harap tunggu pesan selanjutnya dari nomor ini.";
+        $message = "Halo *$appointment[name]*, anda telah membuat janji temu pada tanggal *$meeting_date* di *Poliklinik $polyclinic* dengan *$appointment[doctor]*. Saat ini, status janji temu Anda masih *pending*. Kami akan segera memprosesnya. Harap tunggu pesan selanjutnya dari nomor ini.";
 
         $this->sendMessage($appointment['phone_number'], $message);
         return redirect()->route('home')->with('success', 'Janji temu berhasil dibuat. Silahkan cek Whatsapp anda!');
