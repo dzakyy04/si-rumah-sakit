@@ -23,7 +23,7 @@ class DoctorSeeder extends Seeder
             'speciality_id' => 1,
             'email' => 'jolie@gmail.com',
             'phone_number' => '081234567890',
-            'photo' => asset('images/doctors/female-doctor1.jpg'),
+            'photo' => asset('storage/doctors/female-doctor1.jpg'),
             'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
@@ -33,7 +33,7 @@ class DoctorSeeder extends Seeder
             'speciality_id' => 2,
             'email' => 'emma@gmail.com',
             'phone_number' => '081234567891',
-            'photo' => asset('images/doctors/female-doctor2.jpg'),
+            'photo' => asset('storage/doctors/female-doctor2.jpg'),
             'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
@@ -43,7 +43,7 @@ class DoctorSeeder extends Seeder
             'speciality_id' => 3,
             'email' => 'jennifer@gmail.com',
             'phone_number' => '081234567892',
-            'photo' => asset('images/doctors/female-doctor3.jpg'),
+            'photo' => asset('storage/doctors/female-doctor3.jpg'),
             'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
@@ -53,7 +53,7 @@ class DoctorSeeder extends Seeder
             'speciality_id' => 4,
             'email' => 'zendaya@gmail.com',
             'phone_number' => '081234567896',
-            'photo' => asset('images/doctors/female-doctor4.jpg'),
+            'photo' => asset('storage/doctors/female-doctor4.jpg'),
             'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
@@ -63,7 +63,7 @@ class DoctorSeeder extends Seeder
             'speciality_id' => 5,
             'email' => 'beyonce@gmail.com',
             'phone_number' => '081234567897',
-            'photo' => asset('images/doctors/female-doctor5.jpg'),
+            'photo' => asset('storage/doctors/female-doctor5.jpg'),
             'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
@@ -73,7 +73,7 @@ class DoctorSeeder extends Seeder
             'speciality_id' => 6,
             'email' => 'swift@gmail.com',
             'phone_number' => '081234567898',
-            'photo' => asset('images/doctors/female-doctor6.jpg'),
+            'photo' => asset('storage/doctors/female-doctor6.jpg'),
             'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
@@ -83,7 +83,7 @@ class DoctorSeeder extends Seeder
             'speciality_id' => 7,
             'email' => 'rihanna@gmail.com',
             'phone_number' => '081234567899',
-            'photo' => asset('images/doctors/female-doctor7.jpg'),
+            'photo' => asset('storage/doctors/female-doctor7.jpg'),
             'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
@@ -93,7 +93,7 @@ class DoctorSeeder extends Seeder
             'speciality_id' => 8,
             'email' => 'olivia@gmail.com',
             'phone_number' => '081234567899',
-            'photo' => asset('images/doctors/female-doctor8.jpg'),
+            'photo' => asset('storage/doctors/female-doctor8.jpg'),
             'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
@@ -103,7 +103,7 @@ class DoctorSeeder extends Seeder
             'speciality_id' => 9,
             'email' => 'katy@gmail.com',
             'phone_number' => '081234567899',
-            'photo' => asset('images/doctors/female-doctor9.jpg'),
+            'photo' => asset('storage/doctors/female-doctor9.jpg'),
             'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
@@ -114,7 +114,7 @@ class DoctorSeeder extends Seeder
             'speciality_id' => 1,
             'email' => 'beckham@gmail.com',
             'phone_number' => '081234567895',
-            'photo' => asset('images/doctors/male-doctor1.jpg'),
+            'photo' => asset('storage/doctors/male-doctor1.jpg'),
             'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
@@ -124,7 +124,7 @@ class DoctorSeeder extends Seeder
             'speciality_id' => 2,
             'email' => 'messi@gmail.com',
             'phone_number' => '081234567893',
-            'photo' => asset('images/doctors/male-doctor2.jpg'),
+            'photo' => asset('storage/doctors/male-doctor2.jpg'),
             'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
@@ -134,7 +134,7 @@ class DoctorSeeder extends Seeder
             'speciality_id' => 3,
             'email' => 'ronaldo@gmail.com',
             'phone_number' => '081234567894',
-            'photo' => asset('images/doctors/male-doctor3.jpg'),
+            'photo' => asset('storage/doctors/male-doctor3.jpg'),
             'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
@@ -144,7 +144,7 @@ class DoctorSeeder extends Seeder
             'speciality_id' => 4,
             'email' => 'dicaprio@gmail.com',
             'phone_number' => '081234567810',
-            'photo' => asset('images/doctors/male-doctor4.jpg'),
+            'photo' => asset('storage/doctors/male-doctor4.jpg'),
             'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
@@ -154,7 +154,7 @@ class DoctorSeeder extends Seeder
             'speciality_id' => 5,
             'email' => 'smith@gmail.com',
             'phone_number' => '081234567811',
-            'photo' => asset('images/doctors/male-doctor5.jpg'),
+            'photo' => asset('storage/doctors/male-doctor5.jpg'),
             'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
@@ -164,7 +164,7 @@ class DoctorSeeder extends Seeder
             'speciality_id' => 6,
             'email' => 'cruise@gmail.com',
             'phone_number' => '081234567812',
-            'photo' => asset('images/doctors/male-doctor6.jpg'),
+            'photo' => asset('storage/doctors/male-doctor6.jpg'),
             'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
 
@@ -174,7 +174,7 @@ class DoctorSeeder extends Seeder
             'speciality_id' => 7,
             'email' => 'brad.pitt@gmail.com',
             'phone_number' => '081234567813',
-            'photo' => asset('images/doctors/male-doctor7.jpg'),
+            'photo' => asset('storage/doctors/male-doctor7.jpg'),
             'join_date' => $faker->dateTimeBetween('-9 years', 'now')->format('Y-m-d')
         ]);
     }
