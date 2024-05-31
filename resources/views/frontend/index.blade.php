@@ -74,9 +74,7 @@
                                             untuk mendaftar dan mengakses layanan kesehatan yang mudah dan efisien.</p>
                                     </div>
                                     <ul class="header-action btns-inline">
-                                        <li><a href="#appointment" class="btn btn-primary btn-lg btn-round"><span>Buat
-                                                    janji
-                                                    temu!</span></a></li>
+                                        <li><a href="#appointment" class="btn btn-primary btn-lg btn-round"><span>Buat Janji Temu!</span></a></li>
                                     </ul>
                                 </div><!-- .header-caption -->
                             </div><!-- .col -->
@@ -324,7 +322,7 @@ l22.3,21.7c1.7,1.7,2.5,4.1,2.1,6.5l-5.3,30.7l27.5-14.5C253.4,228.9,254.5,228.6,2
                                 <div class="col-sm-4 col-6">
                                     <div class="card card-full round-xl">
                                         <div class="card-inner card-inner-md">
-                                            <div class="h1 fw-bold text-purple">20</div>
+                                            <div class="h1 fw-bold text-purple">16</div>
                                             <div class="h6 text-base">Tim Ahli <br> Dokter Terbaik</div>
                                         </div>
                                     </div>
